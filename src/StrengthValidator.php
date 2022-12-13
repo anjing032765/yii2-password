@@ -416,55 +416,26 @@ class StrengthValidator extends Validator
     {
         switch ($rule) {
             case self::RULE_MIN:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at least {n, plural, one{one character} other{# characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_min');
             case self::RULE_MAX:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at most {n, plural, one{one character} other{# characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_max');
             case self::RULE_LEN:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain exactly {n, plural, one{one character} other{# characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_len');
             case self::RULE_SPACES:
-                return Yii::t('kvpwdstrength', '{attribute} cannot contain any spaces');
+                return Yii::t('app', 'kvpwdstrength_error.rule_spaces');
             case self::RULE_USER:
-                return Yii::t('kvpwdstrength', '{attribute} cannot contain the username');
+                return Yii::t('app', 'kvpwdstrength_error.rule_user');
             case self::RULE_EMAIL:
-                return Yii::t('kvpwdstrength', '{attribute} cannot contain an email address');
+                return Yii::t('app', 'kvpwdstrength_error.rule_email');
             case self::RULE_LOW:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at least {n, plural, one{one lower case character} other{# lower case characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_low');
             case self::RULE_UP:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at least {n, plural, one{one upper case character} other{# upper case characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_up');
             case self::RULE_NUM:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at least {n, plural, one{one numeric / digit character} other{# numeric / digit characters}} ({found} found)!'
-                );
+                return Yii::t('app', 'kvpwdstrength_error.rule_num');
             case self::RULE_SPL:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} should contain at least {n, plural, one{one special character} other{# special characters}} ({found} found)!'
-                );
-            case self::RULE_REP:
-                return Yii::t(
-                    'kvpwdstrength',
-                    '{attribute} cannot contain more than {n, plural, one{one repeating character} other{# repeating characters}}!'
-                );
-            case self::RULE_HIBP:
-                return Yii::t('kvpwdstrength', '{attribute} is present in compromised password list');
+                return Yii::t('app', 'kvpwdstrength_error.rule_spl');
         }
-
         return null;
     }
 
